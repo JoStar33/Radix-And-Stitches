@@ -10,6 +10,7 @@
     "commit": "./node_modules/cz-customizable/standalone.js"
   },
   "dependencies": {
+    "@stitches/react": "^1.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
