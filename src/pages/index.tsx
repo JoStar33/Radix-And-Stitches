@@ -1,9 +1,5 @@
-import Button from '@/components/style/Button';
+import HomeContainer from '@/domains/Home/containers';
 
 export default function HomePage() {
-  return (
-    <>
-      <Button style={{ backgroundColor: 'red' }}>버튼이다</Button>
-    </>
-  );
+  return <HomeContainer />;
 }

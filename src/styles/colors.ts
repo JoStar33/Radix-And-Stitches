@@ -11,3 +11,5 @@ export const colors = {
   red: '#ff3333',
   deepSkyblue: '#adc1d9',
 };
+
+export type ColorsType = keyof typeof colors;

@@ -1,15 +1,19 @@
 import { styled } from '@/styles';
 import { flexCenter } from '@/styles/common';
 import { type CSS } from '@stitches/react';
-import { type ReactNode } from 'react';
+import { ButtonHTMLAttributes, type ReactNode } from 'react';
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
-  style?: CSS;
+  css?: CSS;
 }
 
-export default function Button({ children, style }: Props) {
-  return <S.Button css={style}>{children}</S.Button>;
+export default function Button({ children, css, ...rest }: Props) {
+  return (
+    <S.Button css={css} {...rest}>
+      {children}
+    </S.Button>
+  );
 }
 
 const S = {
@@ -21,5 +25,6 @@ const S = {
     border: 'none',
     borderRadius: '3px',
     color: '$deepSkyblue',
+    width: '100%',
   }),
 };
