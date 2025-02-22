@@ -1,51 +1,12 @@
-# React + TypeScript + Vite
+# stitches
+일단 리액트에서 돌렸을때는 CSS in JS인듯. 빌드해보니까 JS에 CSS가 다 들어감.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+다만, 서버사이드로 돌렸을때에는 zero runtime css의 형태로 css를 형성하는걸로 보임. 그건 Next같은 서버사이드 라이브러리로 직접 확인해봐야할듯.
 
-Currently, two official plugins are available:
+사용방식이 바닐라 익스트랙트랑 유사함. 객체를 완성시키는 형태로 동작하는듯?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+createStitches를 활용해 styled를 형성해두면 컬러토큰값을 임의로 가져와서 활용하는것도 가능함. 이는 $red, $blue와 같이 사용가능함.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# Radix-And-Stitches
+# radix
+내일해보자
